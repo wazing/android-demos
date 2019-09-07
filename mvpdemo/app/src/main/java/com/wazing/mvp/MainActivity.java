@@ -23,6 +23,7 @@ public class MainActivity extends BaseMvpActivity<MainContract.Presenter>
         findViewById(R.id.request).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MainActivity.this.<TextView>findViewById(R.id.content).setText(null);
                 mPresenter.getUserInfo("wazing");
             }
         });
