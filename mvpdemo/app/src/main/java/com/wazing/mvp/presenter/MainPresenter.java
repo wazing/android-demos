@@ -12,7 +12,6 @@ import com.wazing.mvp.model.MainModel;
  */
 public class MainPresenter implements MainContract.Presenter {
 
-    private static final String TAG = "MainPresenter";
     private final MainContract.Model mModel;
     private final MainContract.View mView;
 
@@ -41,7 +40,6 @@ public class MainPresenter implements MainContract.Presenter {
 
     @Override
     public void onClear() {
-        Log.d(TAG, "onClear: ");
         mModel.onClear();
     }
 }

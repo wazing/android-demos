@@ -12,13 +12,16 @@ public interface BaseContract {
 
     interface Model {
 
+        /** onDestroy()执行后执行 */
         void onClear();
     }
 
     interface View {
 
+        /** 显示dialog */
         void showProgressDialog();
 
+        /** 关闭dialog */
         void dismissProgressDialog();
 
         /** 失败 */
@@ -27,6 +30,7 @@ public interface BaseContract {
 
     interface Presenter extends LifecycleObserver {
 
+        /** 关联onDestroy()生命周期 */
         @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
         void onClear();
     }
